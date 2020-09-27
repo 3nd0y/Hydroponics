@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hydroponics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style-alt.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="login-text">
+            <button class="cta">
+                <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                    <path d="M 0.26899589,4.716791 1.9684684,3.0167177 7.48019,8.6269595 12.987106,3.0167177 14.686578,4.716791 7.48019,12.027707 Z" /></svg>
+            </button>
+            <div class="form">
+                <div class="flexy">
+                    <div class="column">
+                        <div class="config">
+                            <h2>HydroDev WiFi Config</h2>
+                            <div class="wifi">
+                                <div class="input-container">
+                                    <input type="text" id="ssid" placeholder="SSID">
+                                    <button class="input-button">R</button>
+                                </div>
+                                <div class="input-container">
+                                    <input type="password" id="pwd" placeholder="Password">
+                                    <button class="input-button">P</button>
+                                </div>                                
+                            </div>
+                            <h2>Auth Config</h2>
+                            <div class="auth">
+                                <div class="input-container">
+                                    <input type="text" id="host" placeholder="host">
+                                    <input type="checkbox" class="input-checkbox"><!-- <label>TLS</label> -->
+                                </div>
+                                <input type="text" id="token" placeholder="token">
+                            </div>
+                            <button class="signup-btn" id="signup-btn" onclick="send()">Submit</button>
+                        </div>
+                    </div>
+                    <div class="column logo">
+                        <img src="bg.svg" width="1366" height="715">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="call-text">
+              <h1>Green plants gives <span>creativity</span> side</h1>
+              <button class="big-btn">Press Arrow Button</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal-overlay closed" id="modal-overlay" ></div>
+
+    <div class="modal closed" id="modal">
+      <button class="close-button" id="close-button">Close Button</button>
+      <div class="modal-guts">
+        <h1>Parameter Saved</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae expedita corrupti laudantium aperiam, doloremque explicabo ipsum earum dicta saepe delectus totam vitae ipsam doloribus et obcaecati facilis eius assumenda, cumque.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae expedita corrupti laudantium aperiam, doloremque explicabo ipsum earum dicta saepe delectus totam vitae ipsam doloribus et obcaecati facilis eius assumenda, cumque.</p>
+        
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="script_ws.js"></script>
+    <script>
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
+
+</html>
