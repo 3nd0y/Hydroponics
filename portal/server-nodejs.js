@@ -12,6 +12,9 @@ const server = express()
   .get('/style-alt.css', function (req, res) { res.sendFile(__dirname + '/static/style-alt.css') })
   .get('/script.js', function (req, res) { res.sendFile(__dirname + '/static/script.js') })
   .get('/script_ws.js', function(req, res) { res.sendFile(__dirname + '/static/script_ws.js')})
+  .get('/script_ws.js', function(req, res) { res.sendFile(__dirname + '/static/eye-close.svg')})
+  .get('/script_ws.js', function(req, res) { res.sendFile(__dirname + '/static/eye-up.svg')})
+  .get('/script_ws.js', function(req, res) { res.sendFile(__dirname + '/static/refresh.svg')})
   .listen(PORT, () => console.log(`Listening on ${ PORT }\n\n`));
 
 const wss = new WebSocket.Server({ server });
@@ -33,6 +36,11 @@ wss.on('connection', (ws) => {
 setInterval(() => {
   wss.clients.forEach((client) => {
     // client.send(new Date().toTimeString());
-    client.send('["SSID_1", "SSID_2", "SSID_3"]');
+    var ssid = [];
+    for(i=0;i<3;i++) {
+      ssid[i] = "SSID_" + Math.round(Math.random()*10);
+    }
+    client.send(JSON.stringify(ssid))
+    // client.send('["SSID_1", "SSID_2", "SSID_3"]');
   });
 }, 1000);

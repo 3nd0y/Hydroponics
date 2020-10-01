@@ -42,9 +42,13 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-svg {
+/*svg {
   fill: white;
+}*/
+.arrow {
+  fill: white
 }
+
 
 .wrapper {
   width: 100%;
@@ -206,7 +210,7 @@ input[type=password] {
 .input-container {
   width: 100%;
   display: inline-block;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 .input-container input:focus, .input-container input:active {
@@ -224,11 +228,48 @@ input[type=password] {
     margin-top: 10px;
     padding-top: 10px;
     padding-left: 10px;
+    background-color: #85A900;
+    border: 0px;
+}
+
+#refresh {
+  height: 30px;
+  width: 30px;
+  margin-top:-9px;
+  margin-left:-9px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#eye {
+  height: 40px;
+  width: 40px;
+  margin-top:-9px;
+  margin-left:-9px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#ssid {
+  width: 90%;
+  border: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 40px;
+  background-color: #85A900;
+  opacity: 0.6;
+  outline: none;
+  color: #fff;
 }
 
 input[type=checkbox] {
   float: right;
   width: 10%;
+  background: #85A900;
+  color: red;
 }
 /*.input-checkbox {
    float: right;
