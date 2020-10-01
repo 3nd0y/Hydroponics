@@ -11,7 +11,12 @@ ws.onclose = function() {
 }
 
 function send(){
-  let param = {
+  if(document.getElementById('ssid').value &&
+     document.getElementById('pwd').value &&
+     document.getElementById('host').value &&
+     document.getElementById('token').value) {
+
+    let param = {
     ssid:"", 
     pwd: "", 
     host: "", 
@@ -23,6 +28,9 @@ function send(){
   param["token"] = document.getElementById('token').value;
   console.log(param);
   ws.send(JSON.stringify(param));
+  } else {
+    alert('Please fill up all box');
+  }
 }
 
 ws.onmessage = function (event) {
@@ -52,6 +60,6 @@ function scan() {
     }
     /* Add list option */
     for(i in t) {
-      s.options[s.options.length] = new Option(t[i], i);
+      s.options[s.options.length] = new Option(t[i], t[i]);
     }
 }
